@@ -1,0 +1,78 @@
+<!--
+  Generated template for the Nearbyjobsdetail page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="bidpurple">
+    <ion-title>Post Detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<!-- {{email}}
+{{job_category}}
+{{job_title}}
+{{job_description}}
+{{image1}}
+{{image2}}
+{{image3}}
+{{job_location}}
+{{date}}
+{{start_time}}
+{{end_time}}
+{{firstname}}
+{{user_image}} -->
+<ion-slides pager style="height: 250px;">
+    <ion-slide style="background-color: #002">
+<img *ngIf="img11==true" src="http://titan.promaticstechnologies.com/bidwork/public/jobImages/{{image1}}">
+<img *ngIf="img1==true" src="assets/img/Npa.jpg">
+    </ion-slide>
+    <ion-slide style="background-color: #020">
+<img *ngIf="img12==true" src="http://titan.promaticstechnologies.com/bidwork/public/jobImages/{{image2}}">
+<img *ngIf="img2==true" src="assets/img/Npa.jpg">
+    </ion-slide>
+    <ion-slide style="background-color: #200">
+<img *ngIf="img13==true"  src="http://titan.promaticstechnologies.com/bidwork/public/jobImages/{{image3}}">
+<img *ngIf="img3==true" src="assets/img/Npa.jpg">
+    </ion-slide>
+  </ion-slides>
+
+ <div style="float: left;width: 100%;height:6% " text-left>
+    <ion-label no-margin style="padding:15px 0 10px 10px;float:left;font-size:2rem;width: 50%">{{job_title}}</ion-label>
+    <ion-label no-margin text-right style="padding:20px 10px 10px 0;float:left;font-size:1rem;width: 50%">{{end_time}} ,{{date}}</ion-label>
+  </div>
+ <div style="float: left;width: 100%;height:16%" text-left>
+    <p no-margin style="padding:15px 0 10px 10px;float:left;font-size:2rem;">{{email}}</p>
+    <ion-label no-margin text-right style="
+      float: left;
+    font-size: 1.8rem;
+    padding: 1px 57px 27px 0;
+    width: 30%;">{{firstname}}</ion-label>
+  </div>
+<div style="float: left;width: 100%;" text-left>
+    <div text-center style=" border: 1px solid #333;
+    border-radius: 5px;
+    float: left;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    padding: 3px;
+   width: 110px;
+    height:6%  ">Category:{{job_category}}</div>
+  </div>
+  <div style="float: left;width: 100%; height: 11%;" text-left>
+    <ion-label no-margin style="padding:15px 0 10px 10px;float:left;font-size:2rem;width: 100%;">Job Description:</ion-label>
+    <ion-label no-margin style="white-space: normal;padding:0 0 10px 10px;float:left;font-size:1.2rem;width: 100%;">{{job_description}}
+    </ion-label>
+  </div>
+
+  <div style="float: left;width: 100%;" text-left>
+    <ion-label no-margin style="padding:15px 0 5px 10px;float:left;font-size:2rem;width: 100%;">Address:</ion-label>
+<p style=" padding: 1px 5px 0 11px;float:left;font-size:1.7rem;width: 100%; margin-top: 4px;">{{job_location}}</p>  
+  </div>
+
+</ion-content>

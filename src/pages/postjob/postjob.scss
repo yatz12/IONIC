@@ -1,0 +1,8 @@
+page-postjob {
+.content-ios:not([no-bounce]) > .scroll-content::before, .content-ios:not([no-bounce]) > .scroll-content::after {
+    content: "";
+    height: 1px;
+    position: fixed;
+    width: 1px;
+}
+}

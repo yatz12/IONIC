@@ -1,0 +1,62 @@
+<!--
+  Generated template for the Tradesman page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="bidpurple">
+    <ion-title>Tradesman</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<!-- 
+<div style="height:90px;width:100%;float:left;" *ngFor="let value of appointementdatalist;let i=index" (click)="tapondetail(i)">
+ -->
+<ion-content>
+<div style="height:90px;width:100%;float:left;" >
+	<div class="text-box" *ngFor="let value1 of totalbids;let i=index" (click)="tap(i)" >
+		<div class="img-box">
+        <img style=" filter: blur(0.7px);" src="assets/img/clock-26095_1280.png" >
+        
+       </div>
+ <p style="  font-size: 1.3rem;
+    font-weight: bold;
+    left: -28px;
+    position: relative;
+    text-align: justify;
+    top: 18px; ">End Time</p>
+      <p style="font-weight: bolder;
+    left: -31px;
+    position: relative;
+    top: 3px;">{{value1.end_time}}</p>
+       <!-- <p style="font-size: 1.4rem;
+    font-weight: bolder;
+    left: -30px;
+    position: relative;
+    top: 16px;
+    z-index: 1169;">End Time:</p>
+        <p style="font-weight: bolder;
+    left: -25px;
+    position: relative;
+    top: 3px;">{{value1.end_time}}</p> -->
+      
+      <!--  <span>{{value.firstname}}</span> -->
+      <ion-chip class="chip-name">
+      <ion-icon color="bidpurple" name="person"></ion-icon>
+  <ion-label>{{value1.job_category}}</ion-label>
+<!-- </ion-chip> -->
+<!--  <ion-chip class="chip-name2"> -->
+<!--       <ion-icon color="bidpurple" name="md-calculator"></ion-icon> -->
+  <ion-label>Tradesman-{{value1.tradesbids}}</ion-label>
+</ion-chip>
+<!-- <ion-icon class="icontrades" name="ios-arrow-dropright-circle"></ion-icon> -->
+
+
+  </div>
+       
+<div style="clear:both; "></div>
+</div>
+</ion-content>

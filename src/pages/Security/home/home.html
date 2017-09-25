@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="bidpurple">
+    <ion-title>Customer login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<div class="biddiv">
+<ion-label class="bidlabel" stacked>Email:</ion-label>
+<div class="bidborder">
+<ion-input  type="text" [(ngModel)]="email"></ion-input>
+</div>
+</div>
+<div  class="biddiv">
+<ion-label class="bidlabel" stacked>Password:</ion-label>
+<div class="bidborder" >
+<ion-input type="password" [(ngModel)]="password"></ion-input>
+</div>
+</div>
+<ion-checkbox checked="{{checktest}}" color="bidgreen" style=" float: left;
+    margin-top: 15px;
+    width: 6%;" [(ngModel)]="checktest"></ion-checkbox>
+    <div style=" display: block;
+    width: 98%;">
+    <p style=" float: left;
+    margin-left: 5px;
+    margin-top: 15px;
+    width: 92%;">Remember me</p>
+</div>
+
+<p class="bidp" (click)="forgetpassword()"><u class="bidu">Forget Password?</u></p>
+<div class="bidlog">
+    <button ion-button color="bidgreen" style="border-radius: 7px;" block (click)="Bidlog()">LogIn</button>
+</div>
+<div style="margin-top:35px;width: 100%;display: block;">
+	<hr style="background:#000;width: 45%;display: inline-block ">
+	<span text-center style="width: 7%;display: inline-block ">OR</span>
+	<hr style="background:#000;width: 45%;display: inline-block ">
+</div>
+<div class="bidlog">
+    <button ion-button style="background-color:rgb(57,142,231); border-radius: 7px;" block (click)="doFbLogin1()">LogIn With Facebook</button>
+</div>
+<p class="bidp2">Don't have an account?<u class="bidu1" (click)="Signup()">Signup</u></p>
+</ion-content>

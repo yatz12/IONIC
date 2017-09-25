@@ -1,0 +1,89 @@
+<!--
+  Generated template for the Biddetails page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="bidpurple">
+    <ion-title>Bid Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<div class="Bidprofileimage">
+	<img class="bidimagepro" src="{{categoryjobsdetail.user_image}}">
+</div>
+<p style="font-size: 1.9rem;;
+    margin-top: 52px;">Email:{{categoryjobsdetail.email}}</p>
+    <p style="font-size: 1.8rem;
+    margin-top: -15px;">{{categoryjobsdetail.firstname}}</p>
+    <div style="background-color: white;
+    border: 1px solid #e2e2e2;
+    height: 74px;
+    padding: 7px;">
+       <div style="float: left;width: 100%;" text-left>
+    <ion-label no-margin style="float: left;
+    font-size: 1.9rem;
+    padding: 15px 0 7px;">
+    <span style="margin-right: 10px;">Rating By Tradesman:</span>
+   <!--  <ion-icon name="md-star" style="color:orange;"></ion-icon> -->
+   <ion-icon id="star1" name="md-star" style="color:grey;font-size: 0.9em;" ></ion-icon>
+    <ion-icon id="star2" name="md-star" style="color:grey;font-size: 0.9em;" ></ion-icon>
+    <ion-icon  id="star3" name="md-star" style="color:grey;font-size: 0.9em;" ></ion-icon>
+    <ion-icon id="star4" name="md-star" style="color:grey;font-size: 0.9em;" ></ion-icon>
+    <ion-icon id="star5" name="md-star" style="color:grey;font-size: 0.9em;" ></ion-icon>
+    </ion-label>
+</div>
+ </div>
+    
+    <!-- <div style="margin-top: 10px;">
+    	<div style="
+    height: 32px;border: 1px solid #e2e2e2;"><p style="float: left;
+    font-size: 1.5rem;
+    margin-left: 11px;
+    margin-top: 5px;">Time to visit location</p><img style="float: right;
+    height: 20px;
+    margin-right: 14px;
+    margin-top: 6px;
+    text-align: initial;
+    width: 20px;" src="assets/icon/icons/Green-arrow.png">
+    	</div> -->
+   <!--  	<div style=" border: 1px solid #e2e2e2;
+    display: block;
+    float: left;
+    height: 48px;
+    width: 100%;margin-top:-9px"> -->
+   <!--      <ion-item style="border: 1px solid #e2e2e2;margin-top: 9px;" no-lines>
+    <ion-label style="  font-size: 1.5rem;">Date to visit location</ion-label>
+    <ion-datetime displayFormat="DDD MMM D,YYYY" pickerFormat="DDD MM D,YYYY" [(ngModel)]="datepick"></ion-datetime>
+  </ion-item>
+    <ion-item style="border: 1px solid #e2e2e2;margin-top: 9px;" no-lines>
+    <ion-label style="  font-size: 1.5rem;">Time to visit location</ion-label>
+    <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="timepick"></ion-datetime>
+  </ion-item> -->
+  <!--   </div>
+    </div> -->
+    <div style="margin-top:10px ">
+    <p style="float: left;
+    font-size: 1.5rem;
+    margin-top: 12px;">Submit Tradesmark Feedback:</p>
+    </div>
+
+  <ion-item style=" border: 1px solid;
+    float: left;
+    height: 3px;
+    margin-top: -13px;"  >
+    <ion-label>Select Feedback Phrase</ion-label>
+    <ion-select [(ngModel)]="feedbackphrase">
+      <ion-option *ngFor="let phrases of phrase" value="{{phrases.phrase}}">{{phrases.phrase}}</ion-option>
+      </ion-select>
+  </ion-item>
+
+<div class="bidlog">
+    <button ion-button color="bidgreen" block (click)="tapBid()">Submit Tradesman Feedback</button>
+</div>
+</ion-content>

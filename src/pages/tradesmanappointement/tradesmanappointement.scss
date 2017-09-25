@@ -1,0 +1,48 @@
+page-tradesmanappointement {
+.img-box{ 
+
+    border-radius: 50%;
+    height: 70px;
+    left: -35px;
+    position: absolute;
+    width: 70px;
+    overflow:hidden; 
+}
+.text-box{
+  background-color: rgba(0, 0, 0, 0.06);
+    box-shadow: 5px 5px 5px -5px;
+    height: 70px;
+    margin: 10px 50px auto;
+    position: relative;
+    width: 80%;
+}
+
+
+.chip-name{
+     margin: 19px 46px;
+// margin-left: 44px;
+// margin-right: 0;
+// margin-top: 5px;
+// margin-bottom: 2px;
+color: rgba(0,0,0,.8);
+background-color: rgba(0,0,0,.2);
+}
+.chip-name2{
+     margin: -38px;
+// margin-left: 44px;
+// margin-right: 0;
+// margin-top: 8px;
+// margin-bottom: 2px;
+color: rgba(0,0,0,.8);
+background-color: rgba(0,0,0,.2);
+
+
+
+}
+
+.icontrades{
+    color:#5B3162;
+      margin-left: 53px;
+}
+
+}

@@ -1,0 +1,29 @@
+<!--
+  Generated template for the Listofbids page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="bidpurple">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Posted Jobs</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div style="padding:10px;width:calc(100% / 3);float: left;"  *ngFor="let value of job_data;let i=index">
+    <div (click)="biddetails(i)" style="float:left;background-color: #fff;border-radius: 5px;box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);width: 109%;margin-left: -3px;">
+      <div style="background-color:#ffff;border-radius: 50%;height: 70px;width: 70px;overflow: hidden;margin: 10px auto;">
+       <img  class="listofbids" src="assets/img/finalize-Logo-teal.png">
+      </div>
+      <ion-label text-center no-margin no-padding>{{value.job_title}}</ion-label>
+      <ion-label text-left no-margin no-padding style="padding:10px 0 10px 10px;float:left;width: 50%;font-size: 1.1rem;">End time</ion-label>
+      <ion-label text-right no-margin no-padding style="padding:10px 10px 10px 0;float:left;width: 50%;font-size: 1.1rem;">{{value.end_time}}</ion-label>
+    </div>
+  </div>
+
+
+</ion-content>

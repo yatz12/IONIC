@@ -1,0 +1,254 @@
+<!--
+  Generated template for the Mypost page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="bidpurple">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Posts</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<div class="bidpost">
+	<div class="bidpostsub">
+<div  class="biddivcat" (click)="category()"><p class="bidp">Category</p><img class="bidimg" src="assets/icon/Green-arrow.png"></div>
+	</div>
+	<div class="bidpostsub">
+	<div class="biddivcat" (click)="sort()"><p class="bidp">Sort</p><img class="bidimg" src="assets/icon/icons/order-list.png"></div>
+	</div>
+<!-- 	<div style="
+    float: left;
+    height: 64px;
+    width: 33.5%;">
+    <div class="biddivcat" (click)="filter()"><p class="bidp">Filter</p><img class="bidimg" src="assets/icon/Green-filter.png"></div>
+	</div> -->
+</div>
+<div *ngIf="bidpopup2==true">
+<div style="padding:0px !important ;background-color: #fff;width: 100%; margin-top: -55px;"  *ngFor="let data of jobdata1;let i=index">
+   <div style="overflow: hidden;position: relative;display:flex;background-color: #fff;border:1px solid #ddd;width: 100%;float: left;margin-bottom: 0px;height: 70px;"  (click)="Bidpost(data.id,i)" >
+     <div style="padding:10px;align-self:center;float: right;width: 23%;background-color: #fff;height: 100%;">
+       <img src="{{image}}" width="100%" height="100%" style="background:#aaa;">
+     </div>
+
+     <div style="padding:10px;float: left;width: 74%;font-size: 1rem;background-color: #fff;">
+ {{firstname}}<br>
+   
+      <p style="color:#8E8E8E;margin-top:1px;">Job-Category:{{data.job_category}}</p>
+      <ion-label no-margin style="font-size: 0.7rem; margin-top: -8px;">{{data.job_description}}</ion-label>
+      <!-- <span style="color: #234B70">${{data.price}}</span> -->
+
+     </div>
+       <ion-icon name="ios-heart" no-margin no-padding style=" margin: 5px;
+    position: absolute;
+    right: 13px;
+    top: 4px;" ></ion-icon>
+    <span style="font-size: 1.2rem;
+    position: absolute;
+    right: 11px;
+    top: 34px;">{{data.likes}}likes</span>
+    <!--     <img style="bottom: 0;
+    height: 23px;
+    position: absolute;
+    right: 3px;" src="assets/icon/Green-Cart.png"> -->
+   </div>
+  </div> 
+  </div>
+  <div *ngIf="bidpopup1==true">
+  <div style="padding:0px !important ;background-color: #fff;width: 100%; margin-top: -55px;"*ngFor="let data of jobdata;let i=index"  >
+   <div style="overflow: hidden;position: relative;display:flex;background-color: #fff;border:1px solid #ddd;width: 100%;float: left;margin-bottom: 0px;height: 70px;"  (click)="Bidpost(data.id,i)" >
+     <div style="padding:10px;align-self:center;float: right;width: 23%;background-color: #fff;height: 100%;">
+      <!--  <img src="http://titan.promaticstechnologies.com/bidwork/public/userImage/{{image}}" width="100%" height="100%" style="background:#aaa;"> -->
+        <img src="{{image}}" width="100%" height="100%" style="background:#aaa;">
+     </div>
+
+     <div style="padding:10px;float: left;width: 74%;font-size: 1rem;background-color: #fff;">
+   {{firstname}}<br>
+   
+      <p style="color:#8E8E8E;margin-top:1px;">Job-Category:{{data.job_category}}</p>
+      <ion-label no-margin style="font-size: 0.7rem; margin-top: -8px;">{{data.job_description}}</ion-label>
+      <!-- <span style="color: #234B70">${{data.price}}</span> -->
+
+     </div>
+       <ion-icon name="ios-heart" no-margin no-padding style=" margin: 5px;
+    position: absolute;
+    right: 13px;
+    top: 4px;" ></ion-icon>
+    <span style="font-size: 1.2rem;
+    position: absolute;
+    right: 11px;
+    top: 34px;">{{data.likes}}likes</span>
+   <!--    	<img style="bottom: 0;
+    height: 23px;
+    position: absolute;
+    right: 3px;" src="assets/icon/Green-Cart.png"> -->
+   </div>
+
+  </div>
+</div>
+
+  <div *ngIf="bidpopup3==true">
+  <div style="padding:0px !important ;background-color: #fff;width: 100%; margin-top: -55px;"*ngFor="let data of jobdata2;let i=index"  >
+   <div style="overflow: hidden;position: relative;display:flex;background-color: #fff;border:1px solid #ddd;width: 100%;float: left;margin-bottom: 0px;height: 70px;"  (click)="Bidpost(data.id,i)" >
+     <div style="padding:10px;align-self:center;float: right;width: 23%;background-color: #fff;height: 100%;">
+      <!--  <img src="http://titan.promaticstechnologies.com/bidwork/public/userImage/{{image}}" width="100%" height="100%" style="background:#aaa;"> -->
+        <img src="{{image}}" width="100%" height="100%" style="background:#aaa;">
+     </div>
+
+     <div style="padding:10px;float: left;width: 74%;font-size: 1rem;background-color: #fff;">
+   {{firstname}}<br>
+   
+      <p style="color:#8E8E8E;margin-top:1px;">Job-Category:{{data.job_category}}</p>
+      <ion-label no-margin style="font-size: 0.7rem; margin-top: -8px;">{{data.job_description}}</ion-label>
+      <!-- <span style="color: #234B70">${{data.price}}</span> -->
+
+     </div>
+        <ion-icon name="ios-heart" no-margin no-padding style=" margin: 5px;
+    position: absolute;
+    right: 13px;
+    top: 4px;" ></ion-icon>
+    <span style="font-size: 1.2rem;
+    position: absolute;
+    right: 11px;
+    top: 34px;">{{data.likes}}likes</span>
+  <!--       <img style="bottom: 0;
+    height: 23px;
+    position: absolute;
+    right: 3px;" src="assets/icon/Green-Cart.png"> -->
+   </div>
+
+  </div>
+</div>
+
+
+<div *ngIf="bidpopup4==true">
+  <div style="padding:0px !important ;background-color: #fff;width: 100%; margin-top: -55px;"*ngFor="let data of jobdata;let i=index"  >
+   <div style="overflow: hidden;position: relative;display:flex;background-color: #fff;border:1px solid #ddd;width: 100%;float: left;margin-bottom: 0px;height: 70px;"  (click)="Bidpost(data.id,i)" >
+     <div style="padding:10px;align-self:center;float: right;width:23%;background-color: #fff;height: 100%;">
+     <!--   <img src="http://titan.promaticstechnologies.com/bidwork/public/userImage/{{image}}" width="100%" height="100%" style="background:#aaa;"> -->
+       <img src="{{image}}" width="100%" height="100%" style="background:#aaa;">
+     </div>
+
+     <div style="padding:10px;float: left;width: 74%;font-size: 1rem;background-color: #fff;">
+   {{firstname}}<br>
+   
+      <p style="color:#8E8E8E;margin-top:1px;">Job-Category:{{data.job_category}}</p>
+      <ion-label no-margin style="font-size: 0.7rem; margin-top: -8px;">{{data.job_description}}</ion-label>
+      <!-- <span style="color: #234B70">${{data.price}}</span> -->
+
+     </div>
+       <ion-icon name="ios-heart" no-margin no-padding style=" margin: 5px;
+    position: absolute;
+    right: 13px;
+    top: 4px;" ></ion-icon>
+    <span style="font-size: 1.2rem;
+    position: absolute;
+    right: 11px;
+    top: 34px;">{{data.likes}}likes</span>
+     <!--    <img style="bottom: 0;
+    height: 23px;
+    position: absolute;
+    right: 3px;" src="assets/icon/Green-Cart.png"> -->
+   </div>
+
+  </div>
+</div>
+
+
+
+
+   <div style=" background-color: rgba(1, 1, 1, 0.9);
+    height: 22%;
+    left: 12%;
+    position: absolute;
+    top: 27%;
+    width: 78%;" *ngIf="popup==true">
+    <ion-item>
+    <ion-range dualKnobs="true" pin="true" [(ngModel)]="structure" color="bidpurple" min="10" max="1000" step="1" snaps="true">
+    <ion-icon range-left small color="bidpurple" name="logo-usd"></ion-icon>
+<ion-icon range-right color="bidpurple" name="logo-usd"></ion-icon>
+    </ion-range>
+    </ion-item>
+    <button ion-button (click)="taprange()"  style=" font-size: 1.8rem;
+    left: 16%;
+    position: absolute;color:rgb(44,162,162)" clear>Select Range</button>
+   </div>
+ <div style="background-color: rgba(1, 1, 1, 0.9);
+    height: 13%;
+    left: 12%;
+    position: absolute;
+    top: 27%;
+    width: 78%;" *ngIf="popup1==true">
+    <div style="float: left;width: 100%;" text-left>
+        <ion-label no-margin style="color: rgb(28, 155, 155);
+    float: left;
+    font-size: 1.8rem;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;">
+         Select Job Category:
+        </ion-label>
+        <ion-item style="border:2px solid;border-radius: 2px;float:left;width: 100%">
+            <ion-label>JOB Category</ion-label>
+            <ion-select [(ngModel)]="job_category" (ionChange)="onSelectChange($event)">
+              <ion-option value="{{job.name}}" *ngFor="let job of jobcategory">{{job.name}}</ion-option>
+            </ion-select>
+        </ion-item>
+    </div>
+   </div>
+
+
+
+ <div style="background-color: rgba(1, 1, 1, 0.9);
+    height:14%;
+    left: 12%;
+    position: absolute;
+    top: 27%;
+    width: 78%;" *ngIf="popup2==true">
+    <div style="float: left;width: 100%;" text-left>
+        <ion-label no-margin style="color: rgb(28, 155, 155);
+    float: left;
+    font-size: 1.8rem;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;">
+         Sort By date:
+        </ion-label>
+        <ion-item style="border:2px solid;border-radius: 2px;float:left;width: 100%">
+            <ion-label>Date</ion-label>
+            <ion-select [(ngModel)]="sortbydate" (ionChange)="ondateChange($event)">
+              <ion-option value="1" >Older Jobs</ion-option>
+               <ion-option value="2" >Newer Jobs</ion-option>
+            </ion-select>
+        </ion-item>
+    </div>
+        <!-- <div style="float: left;width: 100%;" text-left>
+        <ion-label no-margin style="color: rgb(28, 155, 155);
+    float: left;
+    font-size: 1.8rem;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;">
+         Sort By Price:
+        </ion-label>
+        <ion-item style="border:2px solid;border-radius: 2px;float:left;width: 100%">
+            <ion-label>Price</ion-label>
+            <ion-select [(ngModel)]="sortbyprice" (ionChange)="onpriceChange($event)">
+              <ion-option value="3" >Lower to Higher Jobs</ion-option>
+               <ion-option value="4" >Higher to Lower Jobs</ion-option>
+            </ion-select>
+        </ion-item>
+    </div> -->
+   </div>
+
+
+
+
+
+</ion-content>

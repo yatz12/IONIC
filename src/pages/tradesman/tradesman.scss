@@ -1,0 +1,55 @@
+page-tradesman {
+.img-box{ 
+
+    border-radius: 50%;
+    height: 70px;
+    left: -35px;
+    position: absolute;
+    width: 70px;
+    overflow:hidden; 
+    border: 3.5px solid #5b3162;
+}
+.text-box{
+  background-color: rgba(0, 0, 0, 0.06);
+    box-shadow: 5px 5px 5px -5px;
+    height: 70px;
+    margin: 10px 50px auto;
+    position: relative;
+    width: 80%;
+     border-radius: 40px;
+}
+
+
+.chip-name{
+   background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.8);
+    left: 43px;
+    position: relative;
+    top: -48px;
+      width: 81%;
+// margin-left: 44px;
+// margin-right: 0;
+// margin-top: 5px;
+// margin-bottom: 2px;
+
+}
+.chip-name2{
+   background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.8);
+    left: 65px;
+ 
+    position: relative;
+    top: -49px
+
+
+
+}
+
+.icontrades{
+    color:#5B3162;
+position: relative;
+    top: -64px;
+       float: right;
+       padding:7px 
+}
+}

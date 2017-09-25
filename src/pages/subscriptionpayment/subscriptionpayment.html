@@ -1,0 +1,140 @@
+<!--
+  Generated template for the Subscriptionpayment page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>subscriptionpayment</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+
+<!-- <form name="paymentForm"> -->
+<!-- 		<ion-item>
+			<ion-label floating>Amount</ion-label>
+			<ion-input type="text" name="amount" [(ngModel)]="payment.amount"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Currency</ion-label>
+			<ion-select [(ngModel)]="payment.currency" name="currency">
+				<ion-option value="{{currency}}" *ngFor="let currency of currencies">{{currency}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Description</ion-label>
+			<ion-input type="text" name="description" [(ngModel)]="payment.shortDescription"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Intent</ion-label>
+			<ion-input type="text" name="intent" [(ngModel)]="payment.intent"></ion-input>
+		</ion-item>
+		<p>
+			<button ion-button block color="secondary" (click)="test()">MAKE PAYMENT</button>
+		</p> -->
+<!-- </form> -->
+
+<ion-content class="tutorial-page">
+
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of subscribedata">
+   <!--    <ion-toolbar> -->
+      
+   <!--    </ion-toolbar> -->
+   <!--  <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button> -->
+
+<div style="    height: 10px;
+    position: relative;
+    right: -329px;
+    top: 5px;
+    width: 10px;
+    z-index: 1000;" (click)="closetab()"><ion-icon style="    font-size: 3.6rem; " name="close"></ion-icon></div>
+
+
+      <div style="   background: rgba(0, 0, 0, 0) -moz-linear-gradient(right bottom , #ffff, #1c9b9b) repeat scroll 0 0;
+    height: 650px;
+    position: relative;
+    top: -235px;">
+    <p class="slide-image">{{slide.price}}</p>
+   <!--    <p [innerHTML]="slide.image" class="slide-image"></p> -->
+ <!--        <p style="     color: rgba(0, 0, 0, 0.17);
+    font-size: 118px;
+    left: 0;
+    position: relative;
+    text-align: left;
+    top: -328px;" [innerHTML]="slide.description"></p>  -->
+<p style="     color: rgba(0, 0, 0, 0.17);
+    font-size: 118px;
+    left: 0;
+    position: relative;
+    text-align: left;
+    top: -328px;">
+    	{{slide.money_currency}}
+    </p>
+        <p style=" color: #10504a;
+    font-size: 4.7rem;
+    position: relative;
+    top: -858px;
+    z-index: 1000;" >You will get <span style="color: rgb(0, 255, 255);;
+    font-family: italic;
+    font-size: 4.1rem;
+    font-weight: bold;">{{slide.month}}</span> months membership</p> 
+
+
+
+
+      </div>
+      <div style="background-color: rgba(0, 0, 0, 0.31);
+    height: 83px;
+    padding: 27px;
+    position: relative;
+    top: -439px;">
+  <!--     <h2 class="slide-title" [innerHTML]="slide.title"></h2> -->
+   <h2 class="slide-title" >Try <span style="  color: white;">{{slide.plan}}</span> Plan</h2> 
+         <button style="top: 26px;" ion-button color="danger"
+          (click)="buyplan(slide.price,slide.money_currency,slide.month,slide.plan,slide.id)">Buy Now</button>
+      </div>
+   <!--      <ion-buttons end>
+          <button ion-button color="primary">Buy Now</button>
+        </ion-buttons> -->
+      <!-- <p [innerHTML]="slide.description"></p> -->
+    </ion-slide>
+<!--     <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>
+      <h2 class="slide-title">Ready to Play?</h2>
+      <button ion-button large clear icon-end color="primary">
+        Continue
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide> -->
+  </ion-slides>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

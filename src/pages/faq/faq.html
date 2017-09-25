@@ -1,0 +1,28 @@
+<!--
+  Generated template for the Faq page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="bidpurple">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Faq</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color: #eee;">
+    <div  style="padding:10px;width: 100%;background-color: #fff;float: left;border:1px solid #ddd;margin-bottom: 10px;" *ngFor="let faq of faqdata;let i=index">
+        <div>
+            <ion-label no-margin style="width:90%;float: left;white-space: normal !important;"  >{{faq.id}}.{{faq.question}}</ion-label>
+            <ion-icon *ngIf="answer!=i" (click)="question(i)"  style="width:10%;float: right;text-align: right" name="md-add" ></ion-icon>
+              <ion-icon  *ngIf="answer==i" (click)="question(i)"  style="width:10%;float: right;text-align: right" name="md-remove" ></ion-icon>
+        </div>
+        <hr style="background-color: #ddd;float: left;margin-left: -10px;width: calc(100% + 20px);">
+        <div *ngIf="answer==i" style="font-size: 1rem;">
+           {{faq.answer}}
+        </div>
+    </div>
+</ion-content>

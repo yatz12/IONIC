@@ -1,0 +1,100 @@
+<!--
+  Generated template for the JobPostlocation page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="bidpurple">
+    <button ion-button menuToggle>
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+
+    <ion-title>Post a Job</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<p style=" font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;">Take a Photo</p>
+   <ion-row>
+    <ion-col>
+   <div class="Bidprofileimage" (click)="ImageUpload1()">
+        <img class="bidimagepro"  [src]="apic" *ngIf="apic" >
+
+   <img style=" height: 20px;
+    left: 61%;
+    position: absolute;
+    top: 95%;
+    width: 20px;
+    z-index: 1000;" src="assets/img/add/001-signs-1.png" *ngIf="tap1==true">
+    </div>
+    </ion-col>
+    <ion-col>
+     <div class="Bidprofileimage" (click)="ImageUpload2()">
+        <img class="bidimagepro"  [src]="bpic" *ngIf="bpic" >
+       <img style=" height: 20px;
+    left: 61%;
+    position: absolute;
+    top: 95%;
+    width: 20px;
+    z-index: 1000;" src="assets/img/add/001-signs-1.png"  *ngIf="tap2==true">
+    </div>
+    </ion-col>
+    <ion-col>
+     <div class="Bidprofileimage" (click)="ImageUpload3()">
+        <img class="bidimagepro"  [src]="cpic" *ngIf="cpic">
+       <img style=" height: 20px;
+    left: 61%;
+    position: absolute;
+    top: 95%;
+    width: 20px;
+    z-index: 1000;" src="assets/img/add/001-signs-1.png"  *ngIf="tap3==true">
+      <!--  <img class="bidimagepro" [src]="imageprint"> -->
+       </div>
+    </ion-col>
+</ion-row>
+ <ion-label no-margin style="padding:7px 0;float:left;font-size:1.5rem;width: 100%; margin-left: 15px;margin-top: 10%;" >
+            Choose Date:
+        </ion-label>
+<ion-item>
+       
+      
+   <ion-datetime style="margin:0 5px 0 0;display:inline-table;border:2px solid;border-radius: 2px;float:left;width: 100%;" displayFormat="MMM/DD/YYYY" pickerFormat="MMM/DD/YYYY" [(ngModel)]="date" min="2017-01-31" max="2020-10-31" >
+    </ion-datetime>
+        <!--  <p style="font-size:1.6rem">{{date}}</p> -->
+   
+    </ion-item>
+    <!-- <div style="float: left;width: 100%;" text-left> -->
+      <ion-label no-margin style="padding:7px 0;float:left;font-size:1.5rem;width: 100%; margin-left: 15px;">
+           Start Time:
+        </ion-label>
+      <ion-item>
+      
+   
+   <ion-datetime  displayFormat="h:mm A"  [(ngModel)]="start_time" style="border:2px solid;border-radius: 2px;float:left;width: 100%" >
+    </ion-datetime>
+ 
+      </ion-item>
+    <!-- </div> -->
+     <!-- <div style="float: left;width: 100%;" text-left> -->
+      <ion-label no-margin style="padding:7px 0;float:left;font-size:1.5rem;width: 100%; margin-left: 15px;">
+            End Time:
+        </ion-label>
+        <ion-item>
+       
+       
+        <ion-datetime style="border:2px solid;border-radius: 2px;float:left;width: 100%" displayFormat="h:mm A" [(ngModel)]="end_time"   >
+    </ion-datetime>
+    
+          </ion-item>
+       
+
+  <button ion-button block style=" border-radius: 7px;
+    box-shadow: none;
+    float: left;
+    margin: 33px 1%;" full color="bidgreen" (click)="postjob()" >PUBLISH POST</button>
+
+</ion-content>
+

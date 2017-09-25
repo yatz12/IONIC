@@ -1,0 +1,86 @@
+<!--
+  Generated template for the Tradesmanpostdetail page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="bidpurple">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Post Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content text-center>
+  <ion-slides pager style="height: 250px;">
+    <ion-slide style="background-color: #002">
+<img *ngIf="img11==true" src="http://titan.promaticstechnologies.com/bidwork/public/jobImages/{{image1}}">
+<img *ngIf="img1==true" src="assets/img/Npa.jpg">
+    </ion-slide>
+    <ion-slide style="background-color: #020">
+<img *ngIf="img12==true" src="http://titan.promaticstechnologies.com/bidwork/public/jobImages/{{image2}}">
+<img *ngIf="img2==true" src="assets/img/Npa.jpg">
+    </ion-slide>
+    <ion-slide style="background-color: #200">
+<img *ngIf="img13==true"  src="http://titan.promaticstechnologies.com/bidwork/public/jobImages/{{image3}}">
+<img *ngIf="img3==true" src="assets/img/Npa.jpg">
+    </ion-slide>
+  </ion-slides>
+  <div style="float: left;width: 100%; margin-top: 9px;" text-center >
+<!-- <span style="color:#1C9B9B">Customer Bid: <u style="color:red"> ${{price}}</u></span> -->
+<br>
+<!-- <span style="color:#1C9B9B"> Highest Bid: <u style="color:red"> $ {{highestbid}}</u></span> -->
+</div>
+<div (click)="viewonmap()"><u style="color:#1C9B9B">View On Map</u></div>
+  <div style="float: left;width: 100%;">
+    <ion-icon name="ios-heart-outline" no-margin no-padding style="margin: 5px;" (click)="like()" *ngIf="heart==false"></ion-icon>
+     <ion-icon name="ios-heart" no-margin no-padding style="margin: 5px;font-size: 2.4rem;" *ngIf="heart==true"></ion-icon>
+    <ion-icon name="md-paper" no-margin no-padding style=" margin: 8px;font-size: 2.4rem;" (click)="report()"></ion-icon>
+  </div>
+  <div style="float: left;width: 100%;" text-left>
+    <ion-label no-margin style="padding:15px 0 10px 10px;float:left;font-size:2rem;width: 50%">{{jobtitle}}</ion-label>
+    <ion-label no-margin text-right style="padding:20px 10px 10px 0;float:left;font-size:1.3rem;width: 50%">{{date|date:'mediumDate'}}</ion-label>
+   <ion-label no-margin text-right style="padding:20px 10px 10px 0;float:left;font-size:1.3rem;width: 50%">From: {{starttime}} to {{endtime}}</ion-label>
+<!--   <ion-label no-margin text-right style="padding:20px 10px 10px 0;float:left;font-size:1.3rem;width: 50%">to{{endtime}}</ion-label> -->
+
+  </div>
+  <div style="float: left;width: 100%;" text-left>
+    <div text-center style="  border: 1px solid #333;
+    border-radius: 5px;
+    float: left;
+    font-size: 1.3rem;
+    margin: 0 10px;
+    width: 107px;">Category:{{jobcategory}}</div>
+  </div>
+  <div style="float: left;width: 100%;" text-left>
+    <ion-label no-margin style="padding:15px 0 10px 10px;float:left;font-size:2rem;width: 100%;">Job Description:</ion-label>
+    <ion-label no-margin style="white-space: normal;padding:0 0 10px 10px;float:left;font-size:1.2rem;width: 100%;">{{jobdescription}}
+    </ion-label>
+  </div>
+  <div style="float: left;width: 100%;" text-left>
+  <span style="   float: left;
+    font-size: 2rem;
+    margin-left: 16px;
+    margin-right: 1px;
+    margin-top: 16.65px;">Rate:</span>
+    <ion-label no-margin style="padding:15px 0 10px 10px;float:left;font-size:2rem;">
+    
+   <!--  <ion-icon name="md-star" style="color:orange;"></ion-icon> -->
+   <ion-icon id="star1" name="md-star" style="color:grey;" tappable (click)="tap(1)"></ion-icon>
+    <ion-icon id="star2" name="md-star" style="color:grey;" tappable (click)="tap(2)"></ion-icon>
+    <ion-icon  id="star3" name="md-star" style="color:grey;"  tappable (click)="tap(3)"></ion-icon>
+    <ion-icon id="star4" name="md-star" style="color:grey;" tappable (click)="tap(4)"></ion-icon>
+    <ion-icon id="star5" name="md-star" style="color:grey;" tappable (click)="tap(5)"></ion-icon>
+    </ion-label>
+</div>
+
+  <div style="float: left;width: 100%;" text-left *ngIf="responseid==true">
+    <ion-label no-margin style="padding:15px 0 5px 10px;float:left;font-size:2rem;width: 100%;">Address:</ion-label>
+    <ion-label no-margin style="padding:0 0 0 10px;float:left;font-size:1.5rem;width: 100%;">{{jobloc}}</ion-label>
+  
+  </div>
+ 
+  <button ion-button block style="float:left;margin: 20px 10%;box-shadow: none;width: 80%;" full color="bidgreen" (click)="bidpost()" *ngIf="responseid==false">Bid</button>
+</ion-content>

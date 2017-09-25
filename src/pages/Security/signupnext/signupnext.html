@@ -1,0 +1,68 @@
+
+<ion-header>
+
+  <ion-navbar color="bidpurple">
+    <ion-title>Customer Signup</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<form [formGroup]="Bidform1">
+<div class="biddiv">
+<ion-label class="bidlabel" stacked>Email:</ion-label>
+<div class="bidborder">
+<ion-input  type="text" formControlName="Email" [class.invalid]="!Bidform1.controls.Email.valid && (Bidform1.controls.Email.dirty || submitAttempt)"></ion-input>
+</div>
+</div>
+<ion-item *ngIf="!Bidform1.controls.Email.valid  && (Bidform1.controls.Email.dirty || submitAttempt)">
+                <p style="color:red ">*Please enter a valid Email.</p>
+            </ion-item>
+<div  class="biddiv">
+<ion-label class="bidlabel" stacked>Password:</ion-label>
+<div class="bidborder" >
+<ion-input type="password" formControlName="password" [class.invalid]="!Bidform1.controls.password.valid && (Bidform1.controls.password.dirty || submitAttempt)"></ion-input>
+</div>
+</div>
+<ion-item *ngIf="!Bidform1.controls.password.valid  && (Bidform1.controls.password.dirty || submitAttempt)">
+                <p style="color:red ">*Password 6-30 range</p>
+            </ion-item>
+</form>
+<!-- <div style="width:100%;display:block;margin-top: 39px;">
+<ion-checkbox checked="true" color="bidgreen" style="width:6%;display:inline-block;" ></ion-checkbox>
+<p style="width: 90%;display:inline-block; ">I agree to accept your <u style="color:#1C9B9B;">terms&conditions.</u></p>
+</div> -->
+<!-- <ion-row>
+<ion-col width-10> -->
+<div style=" display: inline-block;
+    padding: 14px;
+    text-align: center;
+    width: 100%;">
+<div style=" display: block;
+    width: 190%;  ">
+<ion-checkbox checked="false" color="bidgreen" style=" float: left;
+    margin-top: 15px;
+    width: 6%;" [(ngModel)]="checktest"></ion-checkbox>
+    </div>
+    <div style=" display: block;
+    width: 98%;">
+    <p style=" float: left;
+    width: 87%;">I agree to accept your <u style="color:#1C9B9B;" (click)="terms()">Terms&conditions.</u></p>
+</div>
+</div>
+<!-- </ion-col>
+<ion-col width-90> -->
+
+<!-- </ion-col>
+</ion-row> -->
+<div class="bidlog">
+    <button ion-button color="bidgreen" block style="border-radius: 7px;" (click)="bidregister()" [disabled]="!Bidform1.valid">Register</button>
+</div>
+<div style="margin-top:35px;width: 100%;display: block;">
+	<hr style="background:#000;width: 45%;display: inline-block ">
+	<span text-center style="width: 7%;display: inline-block ">OR</span>
+	<hr style="background:#000;width: 45%;display: inline-block ">
+</div>
+<p class="bidp2" (click)="login()">Do you have an account?<u class="bidu1">Login</u></p>
+</ion-content>

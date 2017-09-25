@@ -1,0 +1,47 @@
+<!--
+  Generated template for the Tradesmanappointement page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="bidpurple">
+  <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Appointment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  >
+
+<div style="height:90px;width:100%;float:left;" *ngFor="let value of appointementdatalist;let i=index" (click)="tapondetail(i)">
+	<div class="text-box"  >
+		<div class="img-box">
+        <img style="height: 70px;" src="{{value.image}}" >
+       </div>
+      <!--  <span>{{value.firstname}}</span> -->
+
+      <!-- <ion-chip class="chip-name">
+      <ion-icon color="bidpurple" name="person"></ion-icon> -->
+  <p style="position: absolute;left: 63px;">Customer Name:{{value.firstname}}</p>
+  <br>
+<!-- </ion-chip> -->
+
+ <!-- <ion-chip class="chip-name2">
+      <ion-icon color="bidpurple" name="clock"></ion-icon> -->
+  <p style="position: absolute;left: 63px;top: 24px;">Feedback Phrase: <u style="font-weight:bold; "> {{value.feedback_phrase}}</u></p>
+<!-- </ion-chip> -->
+
+<!-- <ion-icon class="icontrades" name="ios-arrow-dropright-circle"></ion-icon>
+ -->
+
+  </div>
+       
+<div style="clear:both; "></div>
+</div>
+
+</ion-content>

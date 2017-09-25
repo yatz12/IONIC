@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar color="bidpurple">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>My Profile</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="Bidprofileimage" (click)="ImageUpload()">
+        <img class="bidimagepro" [src]="pic" *ngIf="pic">
+    </div>
+    <div class="biddiv">
+        <ion-label class="bidlabel" stacked>First Name :</ion-label>
+        <div class="bidborder">
+            <ion-input type="text" [(ngModel)]="firstname"></ion-input>
+        </div>
+    </div>
+    <div class="biddiv">
+        <ion-label class="bidlabel" stacked>Last Name :</ion-label>
+        <div class="bidborder">
+            <ion-input type="text" [(ngModel)]="lastname"></ion-input>
+        </div>
+    </div>
+    <div class="biddiv">
+        <ion-label class="bidlabel" stacked>Address :</ion-label>
+        <div class="bidborder">
+            <ion-input type="text" [(ngModel)]="address"></ion-input>
+        </div>
+    </div>
+    <div class="biddiv">
+        <ion-label class="bidlabel" stacked>Phone Number :</ion-label>
+        <div class="bidborder">
+            <ion-input type="number" [(ngModel)]="phone_number"></ion-input>
+        </div>
+    </div>
+    <div class="biddiv">
+        <ion-label class="bidlabel" stacked>Email :</ion-label>
+        <div class="bidborder">
+            <ion-input type="email" [(ngModel)]="email"></ion-input>
+        </div>
+    </div>
+    <div class="bidlog">
+        <button ion-button color="bidgreen" (click)="edit()" block>Save</button>
+    </div>
+</ion-content>

@@ -1,0 +1,39 @@
+<!--
+  Generated template for the Inbox page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="bidpurple">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Inbox</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div style="padding:0px !important ;background-color: #fff;width: 100%;">
+
+
+   <div style="display:flex;background-color: #fff;border:1px solid #ddd;width: 100%;float: left;margin-bottom: 0px;height: 65px;" (click)="bidchat(value.email,value.username)" *ngFor="let value of onlinedata">
+     <div style="padding:8px;align-self:center;float: right;width: 20%;background-color: #fff;height: 100%;border-radius: 50%;overflow: hidden;">
+       <img src="{{value.user_image}}" width="100%" height="100%" style="background:#aaa;border-radius:50%;overflow: hidden;border: none;">
+     </div>
+
+    <div style="align-self:center;padding:10px;float: left;width: 70%;font-size: 1.4rem;background-color: #fff;" >
+      {{value.username}}<br>
+<!--       <ion-label no-margin style="margin-top:10px;font-size: 1rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</ion-label> -->
+    </div>
+     <div style="display:flex;float: left;width: 10%;font-size: 1rem;background-color: #fff;">
+      <div style="   background-color: #16a765;
+    border-radius: 10px;
+    height: 15px;
+    margin-top: 23px;
+    width: 15px;"></div>
+    <!--    <p style="align-self: center;" no-margin>7.30</p> -->
+     </div>
+   </div>
+  </div>
+</ion-content>

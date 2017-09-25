@@ -1,0 +1,44 @@
+<!--
+  Generated template for the Howitworks page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="bidpurple">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>How it works ?</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+ 
+<ion-content class="tutorial-page">
+ <ion-slides pager>
+    <ion-slide *ngFor="let slide of how">
+      <ion-toolbar>
+        <ion-buttons end>
+          <button ion-button color="danger" (click)="submit()">Skip</button>
+        </ion-buttons>
+      </ion-toolbar>
+    <!--   <img [src]="slide.image" class="slide-image"/> -->
+     <img src="http://europa.promaticstechnologies.com/bidwork/public/howitworks/{{slide.image}}" class="slide-image"/>
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p>
+    </ion-slide>
+    <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>
+      <h2 class="slide-title">Ready to Use?</h2>
+      <button ion-button large clear icon-right color="danger" (click)="submit()">
+        Get Started
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+  </ion-slides>
+ 
+</ion-content>
+

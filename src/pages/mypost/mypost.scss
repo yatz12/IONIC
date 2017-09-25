@@ -1,0 +1,42 @@
+page-mypost {
+ .scroll-content {
+  padding: 0px !important;
+}
+.bidpost{
+    display: block;
+    float: left;
+    height: 65px;
+    width: 100%;
+    margin-bottom:-27px 
+}
+.bidpostsub{
+	 
+    float: left;
+    height: 65px;
+    width:50%;
+}
+.biddivcat{
+ border: 2px solid rgb(212, 212, 212);
+    display: block;
+
+}
+.bidimg{
+ display: inline-block;
+    height: 20px;
+    margin-bottom: -4px;
+    margin-left: -12px;
+    width: 17px;
+}
+.bidp{
+ display: inline-block;
+    margin-left: 8px;
+    width: 70%;
+     font-size: 1.1rem;
+}
+ ion-list + ion-list {
+    margin-top: 0;
+  }
+  .small-text {
+    font-size: 10px;
+  }
+}
